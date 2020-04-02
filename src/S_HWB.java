@@ -53,6 +53,7 @@ public class S_HWB extends Thread{
 
     private void writeToHWA() {
         try {
+            System.out.println("writing to A");
             doStream.writeUTF(TOKEN_B);
         } catch (IOException e) {
             e.printStackTrace();

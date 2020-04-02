@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc014dc3-a8cf-4ec0-8687-63fff6a5424a" name="Default Changelist" comment="" />
+    <list default="true" id="dc014dc3-a8cf-4ec0-8687-63fff6a5424a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HeavyWeightB/S_HWB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HeavyWeightB/S_HWB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/S_HWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/S_HWB.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="221" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -14,7 +22,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VCnTMaVOAIjjm68ImD0zXNqwQR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,7 +34,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Llenguatges/Practica" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -105,37 +118,48 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1577389180547">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1585729741835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577389180547" />
-    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1577389180547">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585729741835" />
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1585839356000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577389180547" />
-    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1577389180547">
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585839356000" />
+    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1585839356000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577389180547" />
-    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1577389180547">
+    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585839356000" />
+    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1585839356000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577389180547" />
-    <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1577017694671">
+    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585839356000" />
+    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1585839356000">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577017694671" />
-    <state width="1493" height="252" key="GridCell.Tab.1.center" timestamp="1577017694671">
+    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585839356000" />
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1577654762962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577017694671" />
-    <state width="1493" height="252" key="GridCell.Tab.1.left" timestamp="1577017694671">
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577654762962" />
+    <state width="1493" height="252" key="GridCell.Tab.1.center" timestamp="1577654762962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577017694671" />
-    <state width="1493" height="252" key="GridCell.Tab.1.right" timestamp="1577017694671">
+    <state width="1493" height="252" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577654762962" />
+    <state width="1493" height="252" key="GridCell.Tab.1.left" timestamp="1577654762962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577017694671" />
+    <state width="1493" height="252" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577654762962" />
+    <state width="1493" height="252" key="GridCell.Tab.1.right" timestamp="1577654762962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577654762962" />
+    <state x="209" y="33" key="new project wizard" timestamp="1585729745288">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1585729745288" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HeavyWeightB$main.ic" NAME="main Coverage Results" MODIFIED="1585824568360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
