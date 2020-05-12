@@ -43,6 +43,14 @@ public class S_HWB extends Thread{
             if (read.equals(TOKEN_A)) {
                 System.out.println("I'm B. I received the following message: " + read);
                 //childLabour();
+                for (int i = 0; i < 10; i++){
+                    System.out.println("\tSoc el procés HeavyWeight B");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }else {
                 readFromHWA();
             }
@@ -91,6 +99,12 @@ public class S_HWB extends Thread{
                     wait = false;
                 }
             }
+        }
+    }
+
+    public void myNotify() {
+        synchronized (this){
+            this.notify();
         }
     }
 }
