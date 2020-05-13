@@ -4,18 +4,24 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class ChildCommsHWB extends Thread {
-    private final static int INCOME_PORT = 44444;
+    private final static int INCOME_PORT = 22222;
 
-    public boolean LWA1Online;
-    public boolean LWA2Online;
-    public boolean LWA3Online;
+    private boolean LWB1Online;
+    private boolean LWB2Online;
+    private boolean LWB1Executed;
+    private boolean LWB2Executed;
+
     private S_HWB parent;
     private ArrayList<DedicatedChildCommsHWB> dedicatedChildCommsList;
 
+    private final static String LWB1 = "LWB1";
+    private final static String LWB2 = "LWB2";
+
     public ChildCommsHWB(S_HWB s_hwb) {
-        LWA1Online = false;
-        LWA2Online = false;
-        LWA3Online = false;
+        LWB1Online = false;
+        LWB2Online = false;
+        LWB1Executed = false;
+        LWB2Executed = false;
         dedicatedChildCommsList = new ArrayList<>();
         this.parent = s_hwb;
     }
@@ -36,9 +42,27 @@ public class ChildCommsHWB extends Thread {
     }
 
     private void newDedicatedChildComms(Socket socket) {
-        DedicatedChildCommsHWB dedicatedChildCommsHWA = new DedicatedChildCommsHWB(socket/*, s_hwa*/, this);
-        dedicatedChildCommsHWA.start();
-        dedicatedChildCommsList.add(dedicatedChildCommsHWA);
+        DedicatedChildCommsHWB dedicatedChildCommsHWB = new DedicatedChildCommsHWB(socket, this);
+        dedicatedChildCommsHWB.start();
+        dedicatedChildCommsList.add(dedicatedChildCommsHWB);
+    }
+
+    public void interconnectChilds(String childName) {
+        switch (childName) {
+            case LWB1:
+                LWB1Online = true;
+                System.out.println("LWB1 online to true");
+                break;
+
+            case LWB2:
+                LWB2Online = true;
+                System.out.println("LWB2 online to true");
+                break;
+
+        }
+        if (LWB1Online && LWB2Online){
+            notifyChildrensToConnect();
+        }
     }
 
     public void notifyChildrensToConnect() {
@@ -47,7 +71,7 @@ public class ChildCommsHWB extends Thread {
         }
     }
 
-    public void childsDone() {
+    private void childsDone() {
         parent.myNotify();
     }
 
@@ -55,5 +79,27 @@ public class ChildCommsHWB extends Thread {
         for (DedicatedChildCommsHWB dedicatedChild : dedicatedChildCommsList) {
             dedicatedChild.work();
         }
+    }
+
+    public void setChildDone(String childName) {
+        switch (childName) {
+            case LWB1:
+                LWB1Executed = true;
+                System.out.println("LWB1 executed to true");
+                break;
+
+            case LWB2:
+                LWB2Executed = true;
+                System.out.println("LWB2 executed to true");
+                break;
+
+        }
+        if (LWB1Executed && LWB2Executed){
+            childsDone();
+        }
+    }
+
+    public boolean childsDoneStatus() {
+        return LWB1Executed && LWB2Executed;
     }
 }

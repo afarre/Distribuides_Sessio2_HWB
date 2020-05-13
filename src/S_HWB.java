@@ -16,6 +16,13 @@ public class S_HWB extends Thread{
     private DataOutputStream doStream;
     private Socket outSocket;
 
+    private ChildCommsHWB childCommsHWB;
+
+    public S_HWB(){
+        childCommsHWB = new ChildCommsHWB(this);
+        childCommsHWB.start();
+    }
+
     private void handShake() {
         try {
             String read = diStream.readUTF();
@@ -27,13 +34,18 @@ public class S_HWB extends Thread{
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         createIncomeConnection();
         createOutcomeConnection();
         //handShake();
         while (true){
             readFromHWA();
             writeToHWA();
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -42,15 +54,7 @@ public class S_HWB extends Thread{
             String read = diStream.readUTF();
             if (read.equals(TOKEN_A)) {
                 System.out.println("I'm B. I received the following message: " + read);
-                //childLabour();
-                for (int i = 0; i < 10; i++){
-                    System.out.println("\tSoc el procés HeavyWeight B");
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
+                //childCommsHWB.childsWork();
             }else {
                 readFromHWA();
             }

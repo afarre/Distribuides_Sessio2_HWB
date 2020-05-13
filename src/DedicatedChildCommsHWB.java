@@ -9,14 +9,13 @@ public class DedicatedChildCommsHWB extends Thread{
     private Socket socket;
     private DataInputStream diStream;
     private DataOutputStream doStream;
-    //private final S_HWA s_hwa;
 
     private ChildCommsHWB parent;
 
 
-    public DedicatedChildCommsHWB(Socket socket, ChildCommsHWB childCommsHWA) {
+    public DedicatedChildCommsHWB(Socket socket, ChildCommsHWB childCommsHWB) {
         this.socket = socket;
-        this.parent = childCommsHWA;
+        this.parent = childCommsHWB;
     }
 
     @Override
@@ -45,38 +44,19 @@ public class DedicatedChildCommsHWB extends Thread{
             case "ONLINE":
                 String childName = diStream.readUTF();
                 System.out.println("Got ONLINE call from: " + childName);
-                interconnectChilds(childName);
+                parent.interconnectChilds(childName);
                 break;
-            case "LWA DONE":
-                System.out.println("notify done in HWA from LWA.");
-                parent.childsDone();
-
+            case "LWB DONE":
+                System.out.println("notify done in HWB from LWB.");
+                childName = diStream.readUTF();
+                parent.setChildDone(childName);
+                break;
+            case "RUN STATUS":
+                doStream.writeBoolean(parent.childsDoneStatus());
                 break;
         }
     }
 
-    private void interconnectChilds(String childName) {
-        switch (childName) {
-            case "LWA1":
-                parent.LWA1Online = true;
-                System.out.println("LWA1 to true");
-                break;
-
-            case "LWA2":
-                parent.LWA2Online = true;
-                System.out.println("LWA2 to true");
-                break;
-
-            case "LWA3":
-                parent.LWA3Online = true;
-                System.out.println("LWA3 to true");
-                break;
-
-        }
-        if (parent.LWA1Online && parent.LWA2Online && parent.LWA3Online){
-            parent.notifyChildrensToConnect();
-        }
-    }
 
     public void connectToAnalogues() {
         try {
