@@ -51,12 +51,10 @@ public class ChildCommsHWB extends Thread {
         switch (childName) {
             case LWB1:
                 LWB1Online = true;
-                System.out.println("LWB1 online to true");
                 break;
 
             case LWB2:
                 LWB2Online = true;
-                System.out.println("LWB2 online to true");
                 break;
 
         }
@@ -72,10 +70,11 @@ public class ChildCommsHWB extends Thread {
     }
 
     private void childsDone() {
-        parent.myNotify();
+        parent.notifyHWA();
     }
 
     public void childsWork() {
+        LWB1Executed = LWB2Executed = false;
         for (DedicatedChildCommsHWB dedicatedChild : dedicatedChildCommsList) {
             dedicatedChild.work();
         }
@@ -100,6 +99,11 @@ public class ChildCommsHWB extends Thread {
     }
 
     public boolean childsDoneStatus() {
+        System.out.println("childsDoneStatus = " + (LWB1Executed && LWB2Executed));
         return LWB1Executed && LWB2Executed;
+    }
+
+    public void myNotify() {
+        parent.myNotify();
     }
 }

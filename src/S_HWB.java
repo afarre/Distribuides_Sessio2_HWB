@@ -38,23 +38,24 @@ public class S_HWB extends Thread{
         createIncomeConnection();
         createOutcomeConnection();
         //handShake();
+        System.out.println("Waiting for childs to connect...\n");
+       /* try {
+            this.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         while (true){
             readFromHWA();
-            writeToHWA();
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
     }
 
     private void readFromHWA() {
         try {
+            System.out.println("Waiting for a message from HWA...");
             String read = diStream.readUTF();
             if (read.equals(TOKEN_A)) {
                 System.out.println("I'm B. I received the following message: " + read);
-                //childCommsHWB.childsWork();
+                childCommsHWB.childsWork();
             }else {
                 readFromHWA();
             }
@@ -65,7 +66,7 @@ public class S_HWB extends Thread{
 
     private void writeToHWA() {
         try {
-            System.out.println("writing to A");
+            System.out.println("Writing token to A");
             doStream.writeUTF(TOKEN_B);
         } catch (IOException e) {
             e.printStackTrace();
@@ -110,5 +111,9 @@ public class S_HWB extends Thread{
         synchronized (this){
             this.notify();
         }
+    }
+
+    public void notifyHWA() {
+        writeToHWA();
     }
 }
