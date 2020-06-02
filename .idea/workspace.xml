@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc014dc3-a8cf-4ec0-8687-63fff6a5424a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/xarxa/X_HWB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HeavyWeightB/S_HWB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HeavyWeightB/S_HWB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChildCommsHWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildCommsHWB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DedicatedChildCommsHWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DedicatedChildCommsHWB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/S_HWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/S_HWB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HeavyWeightB/S_HWB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HeavyWeightB/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HeavyWeightB/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChildCommsHWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/ChildCommsHWB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DedicatedChildCommsHWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/DedicatedChildCommsHWB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/S_HWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/S_HWB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,44 +124,52 @@
       <option name="project" value="LOCAL" />
       <updated>1589394616518</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Funcionalitats de la practica acabades. Pendent de testejar per prevenir errors.">
+      <created>1589884284610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589884284610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pas de token entre HWA i HWB implementat de forma ciclica." />
     <MESSAGE value="Modificacions per a la comunicacio amb els fills fent que s'esperin un cop s'han acabat d'executar." />
     <MESSAGE value="Moficat el HWB per a que es comporti com HWA, amb les mateixes comunicacions i caracteristiques. Pendent de que el HWB inicii els seus fills al rebre el token de HWA, evitant que els fill s'iniciin al estar tots conectats com LWA ja que si no es solapen al començar (tot i que al acabar respecten el token)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moficat el HWB per a que es comporti com HWA, amb les mateixes comunicacions i caracteristiques. Pendent de que el HWB inicii els seus fills al rebre el token de HWA, evitant que els fill s'iniciin al estar tots conectats com LWA ja que si no es solapen al començar (tot i que al acabar respecten el token)." />
+    <MESSAGE value="Funcionalitats de la practica acabades. Pendent de testejar per prevenir errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="Funcionalitats de la practica acabades. Pendent de testejar per prevenir errors." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589276511152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589276511152" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1589394615077">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1589884283533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589394615077" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589884283533" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1585729741835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585729741835" />
-    <state width="1493" height="306" key="GridCell.Tab.0.bottom" timestamp="1589883791191">
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom" timestamp="1591111765920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="306" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589883791191" />
-    <state width="1493" height="306" key="GridCell.Tab.0.center" timestamp="1589883791191">
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591111765920" />
+    <state width="1493" height="196" key="GridCell.Tab.0.center" timestamp="1591111765919">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="306" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589883791191" />
-    <state width="1493" height="306" key="GridCell.Tab.0.left" timestamp="1589883791191">
+    <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591111765919" />
+    <state width="1493" height="196" key="GridCell.Tab.0.left" timestamp="1591111765919">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="306" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589883791191" />
-    <state width="1493" height="306" key="GridCell.Tab.0.right" timestamp="1589883791191">
+    <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591111765919" />
+    <state width="1493" height="196" key="GridCell.Tab.0.right" timestamp="1591111765919">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="306" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589883791191" />
+    <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591111765919" />
     <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1589583644138">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -175,10 +186,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589583644138" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589394620869">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589884286823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589394620869" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589884286823" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589394548219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

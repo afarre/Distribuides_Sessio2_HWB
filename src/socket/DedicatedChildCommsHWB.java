@@ -1,3 +1,5 @@
+package socket;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -49,7 +51,7 @@ public class DedicatedChildCommsHWB extends Thread{
                 break;
             case "LWB DONE":
                 childName = diStream.readUTF();
-                System.out.println("notify done in HWB from " + childName);
+                System.out.println("Child " + childName + " has finished his execution.");
                 parent.setChildDone(childName);
                 break;
             case "RUN STATUS":
@@ -66,7 +68,6 @@ public class DedicatedChildCommsHWB extends Thread{
     public void connectToAnalogues() {
         try {
             doStream.writeUTF("CONNECT");
-            //parent.myNotify();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,7 +75,6 @@ public class DedicatedChildCommsHWB extends Thread{
 
     public void work() {
         try {
-            System.out.println("Sending false to my childs");
             doStream.writeBoolean(false);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,3 +1,5 @@
+package socket;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -39,11 +41,6 @@ public class S_HWB extends Thread{
         createOutcomeConnection();
         //handShake();
         System.out.println("Waiting for childs to connect...\n");
-       /* try {
-            this.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
         while (true){
             readFromHWA();
         }
@@ -66,7 +63,7 @@ public class S_HWB extends Thread{
 
     private void writeToHWA() {
         try {
-            System.out.println("Writing token to A");
+            System.out.println("Writing token to A\n");
             doStream.writeUTF(TOKEN_B);
         } catch (IOException e) {
             e.printStackTrace();
@@ -79,7 +76,6 @@ public class S_HWB extends Thread{
             ServerSocket serverSocket = new ServerSocket(INCOME_PORT);
             //esperem a la conexio del HeavyWeight_B
             Socket incomeSocket = serverSocket.accept();
-            // generaNouServidorDedicat(incomeSocket);
             diStream = new DataInputStream(incomeSocket.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,12 +100,6 @@ public class S_HWB extends Thread{
                     wait = false;
                 }
             }
-        }
-    }
-
-    public void myNotify() {
-        synchronized (this){
-            this.notify();
         }
     }
 

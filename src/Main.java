@@ -1,20 +1,18 @@
-public class Main {
-    private final static int INCOME_PORT_LWB1 = 65555;
-    private final static int INCOME_PORT_LWB2 = 65556;
+import socket.S_HWB;
+import xarxa.X_HWB;
 
-    private final static int OUTGOING_HWB_PORT = 54444;
-    private final static int OUTGOING_LWB1_PORT = 65555;
-    private final static int OUTGOING_LWB2_PORT = 65556;
+public class Main {
 
     public static void main(String[] args) {
         Menu menu = new Menu();
         int opcio = menu.showMenu();
 
         if (opcio == 1){
-            new S_HWB().run();
+            new S_HWB().start();
 
         }else {
-            //SM_HWB sm_hwa = new SM_HWB();
+            X_HWB x_hwb = new X_HWB();
+            x_hwb.start();
         }
     }
 

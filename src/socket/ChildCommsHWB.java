@@ -1,3 +1,5 @@
+package socket;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -84,12 +86,10 @@ public class ChildCommsHWB extends Thread {
         switch (childName) {
             case LWB1:
                 LWB1Executed = true;
-                System.out.println("LWB1 executed to true");
                 break;
 
             case LWB2:
                 LWB2Executed = true;
-                System.out.println("LWB2 executed to true");
                 break;
 
         }
@@ -99,11 +99,6 @@ public class ChildCommsHWB extends Thread {
     }
 
     public boolean childsDoneStatus() {
-        System.out.println("childsDoneStatus = " + (LWB1Executed && LWB2Executed));
         return LWB1Executed && LWB2Executed;
-    }
-
-    public void myNotify() {
-        parent.myNotify();
     }
 }
